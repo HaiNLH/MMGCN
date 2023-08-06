@@ -20,12 +20,12 @@ if __name__ == '__main__':
     parser.add_argument('--PATH_weight_load', default=None, help='Loading weight filename.')
     parser.add_argument('--PATH_weight_save', default=None, help='Writing weight filename.')
 
-    parser.add_argument('--l_r', type=float, default=0.0005, help='Learning rate.')
-    parser.add_argument('--weight_decay', type=float, default=0.1, help='Weight decay.')
+    parser.add_argument('--l_r', type=float, default=1e-5, help='Learning rate.')
+    parser.add_argument('--weight_decay', type=float, default=1e-4, help='Weight decay.')
 
     parser.add_argument('--batch_size', type=int, default=1024, help='Batch size.')
     parser.add_argument('--num_epoch', type=int, default=1000, help='Epoch number.')
-    parser.add_argument('--num_workers', type=int, default=1, help='Workers number.')
+    parser.add_argument('--num_workers', type=int, default=30, help='Workers number.')
 
     parser.add_argument('--dim_E', type=int, default=64, help='Embedding dimension.')
     parser.add_argument('--prefix', default='', help='Prefix of save_file.')
