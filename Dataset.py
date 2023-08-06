@@ -17,7 +17,7 @@ def data_load(dataset, has_v=True, has_a=True, has_t=True):
     if dataset == 'movielens':
         #change due to sample data
         num_user = 100
-        num_item = 993
+        num_item = 1141
         # v_feat = np.load(dir_str+'/FeatureVideo_normal.npy', allow_pickle=True) if has_v else None
         # a_feat = np.load(dir_str+'/FeatureAudio_avg_normal.npy', allow_pickle=True) if has_a else None
         # t_feat = np.load(dir_str+'/FeatureText_stl_normal.npy', allow_pickle=True) if has_t else None

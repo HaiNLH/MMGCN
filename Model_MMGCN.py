@@ -93,7 +93,7 @@ class Net(torch.nn.Module):
 
         self.v_feat = torch.tensor(v_feat,dtype=torch.float).cuda()
         #chagne data delete dim_late = 256
-        self.v_gcn = GCN(self.edge_index, batch_size, num_user, num_item, self.v_feat.size(1), dim_x, self.aggr_mode, self.concate, num_layer=num_layer, has_id=has_id)
+        self.v_gcn = GCN(self.edge_index, batch_size, num_user, num_item, self.v_feat.size(1), dim_x, self.aggr_mode, self.concate, num_layer=num_layer, has_id=has_id, dim_latent = 25)
 
         self.a_feat = torch.tensor(a_feat,dtype=torch.float).cuda()
         self.a_gcn = GCN(self.edge_index, batch_size, num_user, num_item, self.a_feat.size(1), dim_x, self.aggr_mode, self.concate, num_layer=num_layer, has_id=has_id)
