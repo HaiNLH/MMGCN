@@ -9,8 +9,6 @@ import torch_scatter
 # from torch_geometric.utils import scatter_
 
 class GCN(torch.nn.Module):
-    self.v_gcn = GCN(self.edge_index, batch_size, num_user, num_item, self.v_feat.size(1), dim_x, self.aggr_mode,
-                     self.concate, num_layer=num_layer, has_id=has_id, dim_latent=256)
     def __init__(self, edge_index, batch_size, num_user, num_item, dim_feat, dim_id, aggr_mode, concate, num_layer, has_id, dim_latent=None):
         super(GCN, self).__init__()
         self.batch_size = batch_size
