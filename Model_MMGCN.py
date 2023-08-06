@@ -142,7 +142,8 @@ class Net(torch.nn.Module):
         end_index = self.num_user if step==None else step
 
         all_index_of_rank_list = torch.LongTensor([])
-        while end_index <= self.num_user and start_index < end_index:
+        # while end_index <= self.num_user and start_index < end_index:
+        while start_index < end_index:
             temp_user_tensor = user_tensor[start_index:end_index]
             score_matrix = torch.matmul(temp_user_tensor, item_tensor.t())
 
